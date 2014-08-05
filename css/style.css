@@ -1,0 +1,74 @@
+html, body{
+  background: #fff;
+}
+
+/************* Home ***************/
+.logo {
+  width: 300px
+}
+
+#home header {
+  padding-top: 7.33%;
+}
+.nav {
+  display: inline-block;
+}
+.arrow-bottom {
+  position: absolute;
+  bottom: 50px;
+}
+.arrow-down {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  margin-top: 40px;
+  background: #eee;
+  border: 1px solid #dddddd;
+  padding: 16px;
+  font-size: 18px;
+  color: #999999;
+  }
+
+.arrow-down:hover {
+  color: #ffffff;
+  background: #f85d5d;
+  border: 1px solid #e75353;
+}
+
+.arrow-down i {
+  top: 4px;
+}
+
+/********* About *********/
+.js-logo {
+
+}
+.weapons-js {
+  background: url('../img/hunger.png') no-repeat;
+  background-position: 50% 0%
+}
+
+@-webkit-keyframes hunging {
+  0% {
+    -webkit-transform: rotate(1deg);
+    }
+  50% {
+    -webkit-transform: rotate(-2deg);
+  }
+  100% {
+    -webkit-transform: rotate(1deg);
+  }
+}
+
+.hung-please {
+  -webkit-animation: hunging 4s infinite;
+  -webkit-transform-origin: 50% 10%;
+}
+/*************** Footer ***************/
+#hashdog {
+  padding: 200px 0;
+}
+.hashdog-logo {
+  position: relative;
+  top: 50%;
+}

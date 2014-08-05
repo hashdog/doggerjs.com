@@ -1,32 +1,124 @@
+/************* Fonts **************/
+
+@import url(http://fonts.googleapis.com/css?family=Quicksand);
+@import url(http://fonts.googleapis.com/css?family=Oxygen);
+
+/************ IconMoon *******/
+
+@font-face {
+  font-family: 'icomoon';
+  src:url('../fonts/icomoon.eot?-psarfs');
+  src:url('../fonts/icomoon.eot?#iefix-psarfs') format('embedded-opentype'),
+    url('../fonts/icomoon.woff?-psarfs') format('woff'),
+    url('../fonts/icomoon.ttf?-psarfs') format('truetype'),
+    url('../fonts/icomoon.svg?-psarfs#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-facebook:before {
+  content: "\e602";
+}
+.icon-twitter:before {
+  content: "\e601";
+}
+.icon-github:before {
+  content: "\e600";
+}
+
+/************* Social ***************/
+
+.icon-github, .icon-twitter, .icon-facebook {
+  color: #f85d5d;
+}
+.social-icons a i {
+  -webkit-transition: .2s all;
+}
+.social-icons a:hover i.icon-facebook {
+  color: #415e9b;
+}
+.social-icons a:hover i.icon-twitter {
+  color: #55acee;
+}
+.social-icons a:hover i.icon-github {
+  color: #363837;
+}
+.social-icons i {
+  font-size: 22px;
+  margin-right: 20px;
+}
+/************* Base ***************/
+
 html, body{
   background: #fff;
 }
-
+small, p, a {
+font-family: 'Oxygen', sans-serif;
+}
+a {
+  color: #abb1b5;
+}
+a:hover, a:active {
+  color: #f85d5d;
+  text-decoration: none
+}
+h1, h2, h3, h4 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold
+}
+.nav > li > a:hover, .nav > li > a:focus {
+  background-color: #fff;
+}
+.lead {
+  font-family: 'Quicksand', sans-serif;
+}
+.glyphicon-hand-down {
+  font-size: 30px
+}
 /************* Home ***************/
 .logo {
   width: 300px
 }
-
+.navbar-nav {
+  float: none;
+}
 #home header {
   padding-top: 7.33%;
 }
 .nav {
   display: inline-block;
 }
+.navbar-default {
+  border: none;
+  background: none;
+}
 .arrow-bottom {
-  position: absolute;
   bottom: 50px;
+  position: absolute;
 }
 .arrow-down {
-  -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
-  border-radius: 50%;
-  margin-top: 40px;
+  -webkit-border-radius: 50%;
   background: #eee;
+  border-radius: 50%;
   border: 1px solid #dddddd;
-  padding: 16px;
-  font-size: 18px;
   color: #999999;
+  font-size: 18px;
+  margin-top: 40px;
+  padding: 16px;
   }
 
 .arrow-down:hover {
@@ -38,14 +130,56 @@ html, body{
 .arrow-down i {
   top: 4px;
 }
-
+.nav > li > a {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.hover-effect-r, 
+.hover-effect-l {
+  -moz-transition: .2s;
+  -o-transition: .2s;
+  -webkit-transition: .2s;
+  filter:alpha(opacity=00);
+  opacity: 0;
+  position: relative;
+  transition: .2s;
+}
+.hover-effect-r {
+  bottom: -3px;
+  right: -10px;
+}
+.nav > li > a:hover .hover-effect-r,
+.nav > li > a:hover .hover-effect-l {
+  -moz-transition: .2s;
+  -o-transition: .2s;
+  -webkit-transition: .2s;
+  filter:alpha(opacity=100);
+  opacity: 1;
+  transition: .2s;
+}
+.nav > li > a:hover .hover-effect-r {
+  bottom: 0px;
+  right: 0px;
+}
+.hover-effect-l {
+  bottom: -3px;
+  left: -10px;
+}
+.nav > li > a:hover .hover-effect-l {
+  bottom: 0px;
+  left: 0px;
+}
+.salmon {
+  color: #f85d5d;
+}
 /********* About *********/
 .js-logo {
 
 }
 .weapons-js {
   background: url('../img/hunger.png') no-repeat;
-  background-position: 50% 0%
+  background-position: 50% 0%;
 }
 
 @-webkit-keyframes hunging {
@@ -59,16 +193,126 @@ html, body{
     -webkit-transform: rotate(1deg);
   }
 }
-
+@-moz-keyframes hunging {
+  0% {
+    -moz-transform: rotate(1deg);
+    }
+  50% {
+    -moz-transform: rotate(-2deg);
+  }
+  100% {
+    -moz-transform: rotate(1deg);
+  }
+}
+@-o-keyframes hunging {
+  0% {
+    -o-transform: rotate(1deg);
+    }
+  50% {
+    -o-transform: rotate(-2deg);
+  }
+  100% {
+    -o-transform: rotate(1deg);
+  }
+}
+@keyframes hunging {
+  0% {
+    transform: rotate(1deg);
+    }
+  50% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(1deg);
+  }
+}
 .hung-please {
-  -webkit-animation: hunging 4s infinite;
+  -moz-transform-origin: 50% 10%;
+  -o-transform-origin: 50% 10%;
   -webkit-transform-origin: 50% 10%;
+  transform-origin: 50% 10%;
+}
+.animation {
+  -moz-animation: hunging 4s infinite;
+  -o-animation: hunging 4s infinite;
+  -webkit-animation: hunging 4s infinite;
+  animation: hunging 4s infinite;
+}
+.slower-animation {
+  -moz-animation: hunging 6s infinite;
+  -o-animation: hunging 6s infinite;
+  -webkit-animation: hunging 6s infinite;
+  animation: hunging 6s infinite;
+}
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active {
+  background: #f85d5d;
+  color: #fff;
+  border: 1px solid #e45050;
+  transition: .2s all;
+  -webkit-transition: .2s all;
+  -moz-transition: .2s all;
+  -o-transition: .2s all;
 }
 /*************** Footer ***************/
+
 #hashdog {
   padding: 200px 0;
 }
 .hashdog-logo {
   position: relative;
   top: 50%;
+}
+
+/************* Responsive *************/
+
+@media (max-width: 1200px) {
+  .arrow-bottom {
+    left: 50%;
+    margin-left: -41px;
+  }
+}
+@media (max-width: 767px) {
+  .hover-effect-l, .hover-effect-r {
+    display: none
+  }
+  .navbar {
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    z-index: 9;
+    width: 95px
+  }
+  .navbar-default {
+    background: none;
+    border: none;
+  }
+  .navbar-collapse {
+    background: #f85d5d;
+  }
+  .nav > li > a:hover, .nav > li > a:focus {
+  background: none;
+  }
+  .navbar-nav > li > a {
+    color: #fff;
+  }
+ .navbar-nav > li > a:hover {
+  color: #333;
+ }
+  .navbar-toggle.collapsed, .navbar-toggle {
+    margin-top: 0;
+    margin-right: 20px;
+    margin-bottom: 0;
+    border: none;
+  }
+  .responsive-hand {
+    background: #444;
+    color: #fff;
+  }
+  .navbar-toggle:hover, .navbar-toggle:focus {
+    background: #f85d5d;
+    transition: .2s all;
+    -moz-transition: .2s all;
+    -o-transition: .2s all;
+    -webkit-transition: .2s all;
+  }
 }

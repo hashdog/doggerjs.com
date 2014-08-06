@@ -90,7 +90,8 @@ h1, h2, h3, h4 {
 }
 /************* Home ***************/
 .logo {
-  width: 300px
+  margin-bottom: 10px;
+  width: 300px;
 }
 .navbar-nav {
   float: none;

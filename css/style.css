@@ -135,7 +135,7 @@ h1, h2, h3, h4 {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-.hover-effect-r, 
+.hover-effect-r,
 .hover-effect-l {
   -moz-transition: .2s;
   -o-transition: .2s;

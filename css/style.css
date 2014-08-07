@@ -117,10 +117,16 @@ h1, h2, h3, h4 {
   background: #eee;
   border-radius: 50%;
   border: 1px solid #dddddd;
+  bottom: 20px;
   color: #999999;
+  display: block;
   font-size: 18px;
-  margin-top: 40px;
-  padding: 16px;
+  height: 50px;
+  left: 50%;
+  line-height: 50px;
+  margin-left: -25px;
+  position: absolute;
+  width: 50px;
   }
 
 .arrow-down:hover {
@@ -128,7 +134,9 @@ h1, h2, h3, h4 {
   background: #f85d5d;
   border: 1px solid #e75353;
 }
-
+.arrow-down i {
+  margin-left: 14px;
+}
 .arrow-down i {
   top: 4px;
 }
@@ -176,8 +184,8 @@ h1, h2, h3, h4 {
   color: #f85d5d;
 }
 /********* About *********/
-.js-logo {
-
+.show-me {
+  padding-top: 40px;
 }
 .weapons-js {
   background: url('../img/hunger.png') no-repeat;
@@ -266,12 +274,17 @@ h1, h2, h3, h4 {
 }
 
 /************* Responsive *************/
-
+@media (max-height: 720px) {
+  .arrow-down {
+    display: none;
+  }
+}
 @media (max-width: 1200px) {
   .arrow-bottom {
     left: 50%;
     margin-left: -41px;
   }
+
 }
 @media (max-width: 767px) {
   .hover-effect-l, .hover-effect-r {

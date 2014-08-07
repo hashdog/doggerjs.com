@@ -22,10 +22,9 @@
              </div>
              <div class="collapse navbar-collapse" id="collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="https://github.com/hashdog/doggerjs"><span class="salmon hover-effect-l">{</span> ABOUT <span class="salmon hover-effect-r">}</span></a></li>
+                    <li><a href="#about" class="scroll"><span class="salmon hover-effect-l">{</span> ABOUT <span class="salmon hover-effect-r">}</span></a></li>
                     <li><a href="https://github.com/hashdog/doggerjs"><span class="salmon hover-effect-l">{</span> CODE <span class="salmon hover-effect-r">}</span></a></li>
                     <li><a href="https://github.com/hashdog/doggerjs/blob/master/README.md"><span class="salmon hover-effect-l">{</span> DOCS <span class="salmon hover-effect-r">}</span></a></li>
-                    <li><a href="#"><span class="salmon hover-effect-l">{</span> PLUGINS <span class="salmon hover-effect-r">}</span></a></li>
                     <li><a href="https://twitter.com/doggerjs" target="_blank"><span class="salmon hover-effect-l">{</span> TWITTER <span class="salmon hover-effect-r">}</span></a></li>
                 </ul>
              </div>
@@ -125,6 +124,10 @@
       $('#home, #about').height(a - 0);
 
       $('.arrow-down').on('click', function(e) {
+        e.preventDefault();
+        $('#about').ScrollTo();
+      });
+      $('.scroll').on('click', function(e) {
         e.preventDefault();
         $('#about').ScrollTo();
       });

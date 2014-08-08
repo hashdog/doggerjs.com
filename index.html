@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="DoggerJS">
   <meta property="og:description" content="A simple, easy and agile way to start a JavaScript application using a MEAN schema.">
   <meta property="og:url" content="http://doggerjs.com/">
-  <meta property="og:image" content="http://doggerjs.com/img/og.png">
+  <meta property="og:image" content="http://doggerjs.com/img/doggerjs.png">
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="css/bootstrap.css">
@@ -54,8 +54,6 @@
     </a>
   </div>
 
-  <hr>
-
   <div id="about">
     <section id="about">
       <div>
@@ -97,8 +95,6 @@
     </section>
   </div>
 
-  <hr>
-
   <div id="hashdog">
     <section class="text-center">
       <div class="container">
@@ -121,8 +117,16 @@
   <script src="js/jquery-scrollto.js"></script>
   <script>
     $(document).on('ready', function() {
-      var a = $(window).height();
-      $('#home, #about').height(a - 0);
+      var windowRezise = function() {
+        var a = $(window).height();
+        $('#home, #about').height(a);
+      };
+
+      windowRezise();
+
+      $(window).on('resize', function() {
+        windowRezise();
+      });
 
       $('.arrow-down, .scroll').on('click', function(e) {
         e.preventDefault();

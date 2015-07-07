@@ -111,34 +111,50 @@ h1, h2, h3, h4 {
   bottom: 50px;
   position: absolute;
 }
+.arrow {
+  position: absolute;
+  left: 50%;
+  margin-left: -55px;
+  bottom: 20px;
+  text-align: center;
+}
+.arrow h3 {
+  margin-bottom: 30px;
+}
+.arrow-down i {
+  margin-left: -2px;
+}
 .arrow-down {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   background: #eee;
   border-radius: 50%;
   border: 1px solid #dddddd;
-  bottom: 20px;
   color: #999999;
-  display: block;
-  font-size: 18px;
+  display: inline-block;
   height: 50px;
-  left: 50%;
+  font-size: 22px;
   line-height: 50px;
-  margin-left: -25px;
-  position: absolute;
   width: 50px;
+  animation: arrowDown infinite 2s;
+  -webkit-animation: arrowDown infinite 2s;
   }
-
+@keyframes arrowDown {
+  0% {transform: translateY(0px);}
+  50% {transform: translateY(-8px);}
+  90% {transform: translateY(8px);}
+  100% {transform: translateY(0px);}
+}
+@-webkit-keyframes arrowDown {
+  0% {-webkit-transform: translateY(0px);}
+  50% {-webkit-transform: translateY(-8px);}
+  90% {-webkit-transform: translateY(8px);}
+  100% {-webkit-transform: translateY(0px);}
+}
 .arrow-down:hover {
   color: #ffffff;
   background: #f85d5d;
   border: 1px solid #e75353;
-}
-.arrow-down i {
-  margin-left: 14px;
-}
-.arrow-down i {
-  top: 4px;
 }
 .nav > li > a {
   font-size: 12px;
@@ -184,6 +200,46 @@ h1, h2, h3, h4 {
   color: #f85d5d;
 }
 /********* About *********/
+.back-end .dogger {
+  background: url('../img/dogger-backend.png') no-repeat;
+}
+.front-end .dogger {
+  background: url('../img/dogger-frontend.png') no-repeat;
+}
+.dogger {
+  background-size: 100% 100%;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 15px;
+}
+.back-end .dogger h3 {
+  color: #000000;
+}
+.front-end .dogger h3 {
+  color: #ffffff;
+}
+.dogger h3 {
+  position: relative;
+  top: 50%;
+  font-size: 30px;
+}
+.front-end ul, .back-end ul {
+  padding: 0;
+}
+.front-end ul li,
+.back-end ul li {
+  font-family: 'Quicksand', sans-serif;
+  list-style: none;
+  font-size: 18px;
+}
+.front-end ul li i, .back-end ul li i {
+  font-size: 12px;
+  margin-right: 10px;
+  color: #f85d5d;
+}
+.border-right {
+  border-right: 1px solid #f2f2f2;
+}
 .show-me {
   padding-top: 40px;
 }

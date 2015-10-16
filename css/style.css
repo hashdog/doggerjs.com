@@ -57,7 +57,7 @@
   color: #363837;
 }
 .social-icons i {
-  font-size: 22px;
+  font-size: 36px;
   margin-right: 20px;
 }
 /************* Base ***************/
@@ -114,7 +114,7 @@ h1, h2, h3, h4 {
 .arrow {
   position: absolute;
   left: 50%;
-  margin-left: -55px;
+  margin-left: -25px;
   bottom: 20px;
   text-align: center;
 }
@@ -134,7 +134,8 @@ h1, h2, h3, h4 {
   display: inline-block;
   height: 50px;
   font-size: 22px;
-  line-height: 50px;
+  text-align: center;
+  line-height: 54px;
   width: 50px;
   animation: arrowDown infinite 2s;
   -webkit-animation: arrowDown infinite 2s;
@@ -151,7 +152,7 @@ h1, h2, h3, h4 {
   90% {-webkit-transform: translateY(8px);}
   100% {-webkit-transform: translateY(0px);}
 }
-.arrow-down:hover {
+.arrow-down:hover, .arrow-down:active, .arrow-down:focus {
   color: #ffffff;
   background: #f85d5d;
   border: 1px solid #e75353;
@@ -244,7 +245,7 @@ h1, h2, h3, h4 {
   padding-top: 40px;
 }
 #about {
-  padding-top: 30px;
+  padding-top: 130px;
 }
 .weapons-js {
   background: url('../img/hunger.png') no-repeat;
@@ -333,9 +334,18 @@ h1, h2, h3, h4 {
 }
 
 /************* Responsive *************/
-@media (max-height: 720px) {
+@media (max-height: 620px) {
   .arrow-down {
-    display: none;
+
+  }
+  #home header {
+    padding-top: 20px;
+  }
+  .navbar {
+    margin-bottom: 0px;
+  }
+  .logo {
+    margin-bottom: 0;
   }
 }
 @media (max-width: 1200px) {
